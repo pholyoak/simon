@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="play.html">Play</a>
@@ -39,47 +39,54 @@
         </nav>
     </header>
 
-    <main>
-        <div id="table-scroll" class="table-scroll">
-            <div class="table-wrap">
-                <table class="main-table">
-                    <thead>
-                        <tr>
-                            <th class="fixed-side" scope="col">&nbsp;</th>
-                            <th scope="col">name</th>
-                            <th scope="col">Score</th>
-                            <th scope="col">Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="fixed-side">1</th>
-                            <td>Micahel Jordan</td>
-                            <td>23</td>
-                            <td>Jan 1st 2001</td>
-                        </tr>
-                        <tr>
-                            <th class="fixed-side">2</th>
-                            <td>Lebron James</td>
-                            <td>38</td>
-                            <td>Jan 12th 2021</td>
-                        </tr>
-                        <tr>
-                            <th class="fixed-side">3</th>
-                            <td>John Stockton</td>
-                            <td>12</td>
-                            <td>Aug 13th 2014</td>
-                        </tr>
 
 
-                    </tbody>
 
-                </table>
-            </div>
-        </div>
+    <main id="score-table" class="container-fluid bg-secondary text-center">
+        <table class="table table-warning table-striped-columns">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Micahel Jordan</td>
+                    <td>23</td>
+                    <td>Jan 1st 2001</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lebron James</td>
+                    <td>38</td>
+                    <td>Jan 12th 2021</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>John Stockton</td>
+                    <td>12</td>
+                    <td>Aug 13th 2014</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <footer>
-            <span class="text-reset">Porter Holyoak & Thomas Bryson</span>
-            <a href="https://github.com/pholyoak/simon.git">GitHub</a>
-        </footer>
+        </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <span class="text-reset">Porter Holyoak & Thomas Bryson</span>
+        <a href="https://github.com/pholyoak/simon.git">GitHub</a>
+    </footer>
     </main>
