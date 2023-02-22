@@ -117,3 +117,16 @@ footer {
     height: 100%;
     padding-top: 15%;
 }
+
+#aboutpage {
+    height: 100%;
+}
+
+p,
+div {
+    color: white;
+}
+
+.aboutText {
+    top: 100px;
+}
