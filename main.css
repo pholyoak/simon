@@ -121,9 +121,15 @@ footer {
     height: 100%;
 }
 
-p,
-div {
+div,
+p {
     color: white;
 }
 
-.aboutText {}
+label {
+    color: black;
+}
+
+#dashes {
+    color: black;
+}
