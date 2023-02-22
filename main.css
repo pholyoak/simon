@@ -1,3 +1,22 @@
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+
+}
+
 #navigationBar {
     background-color: #114B5F;
+}
+
+#login {
+    height: 95%;
+}
+
+.welcome {
+    padding-top: 20%;
+}
+
+footer {
+    margin-top: -33px;
 }

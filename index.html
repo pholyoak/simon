@@ -40,23 +40,20 @@
         </nav>
     </header>
 
-    <main>
-        <h3>Welcome to the game of SIMON</h3>
-
-        <div>
-            <h1>Login to play</h1>
+    <main id="login" class="container-fluid bg-secondary text-center">
+        <div class="welcome">
+            <h1>Welcome</h1>
+            <p>Login to play</p>
+            <form method="get" action="play.html">
+                <input type="text" id="name" placeholder="Your name here">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
         </div>
 
-        <form action="play.html">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter name">
-            <button type="submit">Play</button>
-        </form>
     </main>
 
     <footer>
-        <span class="text-reset">Author Name(s)</span>
-        <br>
+        <span class="text-reset">Porter Holyoak & Thomas Bryson</span>
         <a href="https://github.com/pholyoak/simon.git">GitHub</a>
     </footer>
 
