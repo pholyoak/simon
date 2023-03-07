@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Simon Says Game</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon</title>
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="main.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 </head>
 
-<header>
-
-    <!-- Navigation elements -->
-    <nav id="navigationBar" class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Simon</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+<body class="bg-dark text-light">
+    <header class="container-fluid">
+        <nav class="navbar fixed-top navbar-dark">
+            <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+            <menu class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="play.html">Play</a>
+                    <a class="nav-link active" href="play.html">Play</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scores.html">Scores</a>
@@ -32,48 +30,41 @@
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-            </ul>
+            </menu>
+        </nav>
+    </header>
+
+    <main class="bg-secondary">
+        <div class="players">
+            Player:
+            <span class="player-name"></span>
         </div>
-    </nav>
-
-</header>
-
-<body class="bg-secondary">
-
-    <div class="player-name">
-        <h1>Player: <span id="playerName"></span></h1>
-    </div>
-
-    <button id="start">Start Game</button>
-    <button id="reset">Reset</button>
-
-    <main id="play" class="players bg-secondary">
-
-        <div class="score">
-            <label class="score-label" for="count">Score</label>
-            <div id="score-count">
-                <span id="level">---</span>
+        <div class="game">
+            <div class="button-container">
+                <!-- buttons are discovered in the JavaScript by selecting the game-button class -->
+                <!-- onclick triggers a button push interaction -->
+                <button id="green" class="game-button button-top-left" onclick="game.pressButton(this)"></button>
+                <button id="red" class="game-button button-top-right" onclick="game.pressButton(this)"></button>
+                <button id="yellow" class="game-button button-bottom-left" onclick="game.pressButton(this)"></button>
+                <button id="blue" class="game-button button-bottom-right" onclick="game.pressButton(this)"></button>
+                <div class="controls center">
+                    <div class="game-name">Simon<sup>&reg;</sup></div>
+                    <div id="score" class="score center">--</div>
+                    <button class="btn btn-primary" onclick="game.reset()">Reset</button>
+                </div>
             </div>
-
         </div>
-
-        <div id="game" class="button-container">
-            <div class="gameButton green"></div>
-            <div class="gameButton red"></div>
-            <div class="gameButton yellow"></div>
-            <div class="gameButton blue"></div>
-            </table>
-        </div>
-        </div>
-        <!-- <p id="level">Score: 0</p> -->
-        <p id="message"></p>
-        <script src="play.js"></script>
     </main>
-</body>
 
-<footer>
-    <span class="text-reset">Porter Holyoak & Thomas Bryson</span>
-    <a href="https://github.com/pholyoak/simon.git">GitHub</a>
-</footer>
+    <footer class="bg-dark text-dark text-muted">
+        <div class="container-fluid">
+            <span class="text-reset">Porter holyoak and Thomas Bryson</span>
+            <a class="text-reset" href="https://github.com/pholyoak/simon.git">Source</a>
+        </div>
+    </footer>
+
+    <!-- Script is located at the bottom because it references HTML elements during initialization -->
+    <script src="play.js"></script>
+</body>
 
 </html>

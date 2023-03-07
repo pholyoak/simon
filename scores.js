@@ -5,7 +5,7 @@ function loadScores() {
         scores = JSON.parse(scoresText);
     }
 
-    const tableBodyEl = document.getElementById('#scores');
+    const tableBodyEl = document.querySelector('#scores');
 
     if (scores.length) {
         for (const [i, score] of scores.entries()) {

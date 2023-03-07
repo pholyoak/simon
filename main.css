@@ -1,44 +1,71 @@
-body,
-html {
-    height: 100%;
-
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
 }
 
-#navigationBar {
-    background-color: #114B5F;
+header {
+    flex: 0 80px;
 }
 
-#login {
-    height: 95%;
-}
-
-.welcome {
-    padding-top: 20%;
-}
-
-footer {
-    position: absolute;
-    top: 97%;
-}
-
-#play {
-    height: 100%;
-}
-
-.players {
-    height: 100%;
+main {
     flex: 1 calc(100vh - 110px);
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
 }
 
-.gameButton {
-    width: 355px;
-    height: 355px;
+footer {
+    flex: 0 30px;
+}
+
+menu {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
+}
+
+.navbar-brand {
+    padding-left: 0.3em;
+    border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+menu .nav-item {
+    padding: 0 0.3em;
+}
+
+footer a {
+    float: right;
+}
+
+#count {
+    color: rgb(246, 239, 158);
+}
+
+.players {
+    flex: 1;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.player-name {
+    color: rgb(118, 190, 210);
+}
+
+.game {
+    background: rgb(0, 0, 0);
     border-radius: 50%;
-    margin: 10px;
-    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgb(69, 69, 69);
+    width: 80vw;
+    height: 80vw;
+    position: absolute;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: min(80vmin, 1000px);
+    max-height: min(80vmin, 1000px);
 }
 
 .button-container {
@@ -49,75 +76,72 @@ footer {
     gap: 20px;
 }
 
-.green {
+.button-top-left {
     border-radius: 100% 0 0 0;
     margin: 20px 0 0 20px;
     background-color: green;
     border: thick solid rgb(36, 53, 0);
 }
 
-.red {
+.button-top-right {
     border-radius: 0 100% 0 0;
     margin: 20px 20px 0 0;
     background-color: red;
     border: thick solid rgb(83, 12, 12);
 }
 
-.yellow {
+.button-bottom-left {
     border-radius: 0 0 0 100%;
     margin: 0 0 20px 20px;
     background-color: yellow;
-    border: thick solid rgb(130, 124, 13);
+    border: thick solid rgb(94, 90, 10);
 }
 
-.blue {
+.button-bottom-right {
     border-radius: 0 0 100% 0;
     margin: 0 20px 20px 0;
     background-color: blue;
     border: thick solid rgb(27, 14, 100);
 }
 
-.flash {
-    opacity: .6;
-}
-
-#game {
-    background: rgb(0, 0, 0);
-    border-radius: 50%;
-    box-shadow: 0 0 20px 5px rgb(69 69 69);
-    width: 80vw;
-    height: 80vw;
+.controls {
     position: absolute;
-    min-width: 350px;
-    min-height: 350px;
-    max-width: min(80vmin, 1000px);
-    max-height: min(80vmin, 1000px);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-#play {
-    height: 100%;
+.game-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .score {
-    z-index: 1000;
-    width: 150px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #E4FDE1;
     position: absolute;
-    bottom: 40%;
+    text-align: center;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    color: red;
+    cursor: default;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid thin rgb(117, 0, 0);
+    background-color: #300;
 }
 
-.score-label {
-    margin-left: 52px;
-}
-
-#score-count {
-    margin-left: 62px;
-}
-
-#aboutpage {
-    height: 100%;
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 @media (max-height: 500px) {
