@@ -54,7 +54,7 @@ class Game {
             }
         });
 
-        const playerNameEl = document.querySelector('.player-name');
+        const playerNameEl = document.querySelector('.players');
         playerNameEl.textContent = this.getPlayerName();
     }
 
