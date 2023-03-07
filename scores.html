@@ -7,7 +7,7 @@
     <title>About</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="main.css">
-    <script src="login.js"></script>
+    <script src="scores.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -40,7 +40,7 @@
         </nav>
     </header>
 
-    <main id="score-table" class="container-fluid bg-secondary text-center">
+    <main class="container-fluid bg-secondary text-center">
         <table class="table table-warning table-striped-columns">
             <thead class="table-dark">
                 <tr>
@@ -50,21 +50,11 @@
                     <th>Date</th>
                 </tr>
             </thead>
-            <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Score</th>
-                <th>Date</th>
-            </tr>
-            </thead>
             <tbody id="scores"></tbody>
-        </table>
-
-        </tbody>
         </table>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-dark text-muted">
         <span class="text-reset">Porter Holyoak & Thomas Bryson</span>
         <a href="https://github.com/pholyoak/simon.git">GitHub</a>
     </footer>

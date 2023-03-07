@@ -29,9 +29,16 @@ footer {
     height: 100%;
     flex: 1 calc(100vh - 110px);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
+}
+
+.gameButton {
+    width: 355px;
+    height: 355px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .button-container {
@@ -42,32 +49,36 @@ footer {
     gap: 20px;
 }
 
-.button-top-left {
+.green {
     border-radius: 100% 0 0 0;
     margin: 20px 0 0 20px;
     background-color: green;
     border: thick solid rgb(36, 53, 0);
 }
 
-.button-top-right {
+.red {
     border-radius: 0 100% 0 0;
     margin: 20px 20px 0 0;
     background-color: red;
     border: thick solid rgb(83, 12, 12);
 }
 
-.button-bottom-left {
+.yellow {
     border-radius: 0 0 0 100%;
     margin: 0 0 20px 20px;
     background-color: yellow;
     border: thick solid rgb(130, 124, 13);
 }
 
-.button-bottom-right {
+.blue {
     border-radius: 0 0 100% 0;
     margin: 0 20px 20px 0;
     background-color: blue;
     border: thick solid rgb(27, 14, 100);
+}
+
+.flash {
+    opacity: .6;
 }
 
 #game {
@@ -83,8 +94,8 @@ footer {
     max-height: min(80vmin, 1000px);
 }
 
-#playerName {
-    margin-bottom: 40%;
+#play {
+    height: 100%;
 }
 
 .score {
@@ -94,7 +105,7 @@ footer {
     border-radius: 50%;
     background-color: #E4FDE1;
     position: absolute;
-    bottom: 38%;
+    bottom: 40%;
 }
 
 .score-label {
@@ -105,31 +116,20 @@ footer {
     margin-left: 62px;
 }
 
-#Reset {
-    position: absolute;
-    left: 20px;
-    top: 100px;
-    background-color: #456990;
-}
-
-#score-table {
-    height: 100%;
-    padding-top: 15%;
-}
-
 #aboutpage {
     height: 100%;
 }
 
-div,
-p {
-    color: white;
-}
+@media (max-height: 500px) {
+    header {
+        display: none;
+    }
 
-label {
-    color: black;
-}
+    footer {
+        display: none;
+    }
 
-#dashes {
-    color: black;
+    main {
+        flex: 1 100vh;
+    }
 }
