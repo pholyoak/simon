@@ -4,6 +4,10 @@ body {
     min-width: 300px;
 }
 
+.navigationBar {
+    background-color: #114B5F;
+}
+
 header {
     flex: 0 80px;
 }
